@@ -130,12 +130,17 @@ function myEqual(){
 	
    document.getElementById("numers").innerHTML = myNumber - SecondNum;
 
-}  else if (flag==3){
+}  else if (flag==3 && SecondNum>0){
 
 	
    document.getElementById("numers").innerHTML = myNumber/SecondNum;
 
-}  else if (flag==4){
+} else if (flag==3 && SecondNum==0){
+
+	
+   document.getElementById("numers").innerHTML = "0";
+
+} else if (flag==4){
 
 	
    document.getElementById("numers").innerHTML = myNumber*SecondNum;
