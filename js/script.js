@@ -117,8 +117,7 @@ function myEqual(){
    var SecondNum = document.getElementById("numers").innerHTML;
    document.getElementById("numers").innerHTML = "0";
 
-   alert(myNumber);
-   alert(SecondNum);
+   
 
 
 
