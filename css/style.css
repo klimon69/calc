@@ -1,3 +1,28 @@
+@font-face {
+    font-family: Digital;
+    src: url(digital.ttf); 
+    
+   }
+
+
+@font-face {
+    font-family: Nums;
+    src: url(nums.otf); 
+    
+   }
+
+
+
+
+body{
+
+background-image: url(bg.jpg);
+background-repeat: no-repeat;
+
+background-size: cover;
+}
+
+
 .background{
 
 width: 500px;
@@ -6,8 +31,22 @@ background-color: grey;
 margin: 0 auto;
 margin-top: 200px;
 position: relative;
+border-radius: 35px;
 
 
+
+}
+
+
+.name{
+
+
+position: absolute;
+font-family: Digital;
+font-size: 25px;
+color: rgba(255, 255, 255, 0.5);
+bottom: 10px;
+left: 150px;
 
 }
 
@@ -16,12 +55,12 @@ position: relative;
 #output{
 
 
-top: 30px;
+top: 50px;
 width: 400px;
-height: 50px;
-background-color: white;
+height: 70px;
+background-color: rgba(164, 245, 177, 0.2);
 margin-left: 45px;
-border: solid black 2px;
+border: solid #404040 2px;
 border-radius: 20px; 
 position: relative;
 }
@@ -31,10 +70,12 @@ position: relative;
 
 #output h2{
 
-font-size: 40px;
+font-family: Digital;
+font-size: 50px;
 position: absolute;
 right: 15px;
-top: -30px;
+top: -28px;
+
 }
 
 #buttons{
@@ -42,6 +83,7 @@ width: 400px;
 position: absolute;
 top: 150px;
 left: 70px;
+
 
 
 }
@@ -53,8 +95,25 @@ left: 70px;
 
 #buttons input{
 
+font-family: Nums;
+font-size: 30px;
 width: 70px;
 height: 70px;
+border-radius: 25%; 
 
 }
+
+
+
+#buttons #clear{
+
+
+	background-color: #eb5454;
+}
+
+
+
+
+
+
 
