@@ -1,10 +1,48 @@
 
 
- 
+var ResArr=[]; 
 var Num = [];                      /*Массив для работы над числами*/
 var myNumber = new Number("0");   /*Первое число*/
 var SecondNum = new Number("0");   /*Второе число*/
 var flag = new Number("0");        /*флаг для того что бы узнать что было нажато плюс минус умножить или поделить*/
+var Res = new Number("0");
+
+
+/*===========================ф-ция цифры не нажимаются=====================================================*/
+
+function numsBlock(){
+
+
+     for (var i = 0; i < 9; i++) {
+
+       document.getElementById("i").className = "block";
+       
+     }
+
+     
+
+
+}
+
+
+
+
+/*===========================ф-ция цифры нажимаются=====================================================*/
+
+function numsUnlock(){
+
+     for (var i = 0; i < 9; i++) {
+
+       document.getElementById("i").className = "i";
+       
+     }
+
+
+}
+
+
+
+
 
 
 
@@ -17,10 +55,24 @@ function myFunction(clicked_id) {
       var b = clicked_id;
       
       
-      Num.push(b);
+     
+
+        if (Num.length <=15){        /* что бы число не вылазило за границы табло (не блоее 15 знаков)*/
+          
+           Num.push(b);
+
+          document.getElementById("numers").innerHTML = Num.join ('');
+
+
+        }else{
+
+         numsBlock();
+         
+
+        }
       
 
-      document.getElementById("numers").innerHTML = Num.join ('');
+      
       
     
 }
@@ -185,6 +237,19 @@ function myDel(){
 
 
 
+/*============================ф-ция обрезка длиннее ли 15 символов ===========================================*/
+
+function numCut(){
+
+
+       
+
+
+
+
+}
+
+
 /*==================================ф-ция РАВНО==============================================*/
 
 
@@ -197,9 +262,23 @@ function myEqual(){
    
      if (flag==1) {
 
-       document.getElementById("numers").innerHTML = Number(myNumber) + Number(SecondNum);
+         var Res = Number(myNumber) + Number(SecondNum);
+       
+         var ResArr = String(Res).split(",");
+  
+         for (var i =15; i < ResArr.length; i++) {
+          
+                delete ResArr[i];
+       
+     }
+         
+       document.getElementById("numers").innerHTML = ResArr.join ('');
 
-      } else if (flag==2){
+       
+
+
+ 
+ } else if (flag==2){ki
 
 	
       document.getElementById("numers").innerHTML = myNumber - SecondNum;
@@ -217,7 +296,17 @@ function myEqual(){
       } else if (flag==4){
 
 	
-       document.getElementById("numers").innerHTML = myNumber*SecondNum;
+       var Res = Number(myNumber) * Number(SecondNum);
+       
+         var ResArr = String(Res).split(",");
+  
+         for (var i =15; i < ResArr.length; i++) {
+          
+                delete ResArr[i];
+       
+     }
+         
+       document.getElementById("numers").innerHTML = ResArr.join ('');
 
       } 
 
