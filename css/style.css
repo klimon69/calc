@@ -14,14 +14,13 @@
 
 
 
-body{
-
-background-image: url(bg.jpg);
-background-repeat: no-repeat;
-
-background-size: cover;
+html {
+        background: url(bg.jpg) no-repeat center center fixed;         /*ЭТО ШЕДЕЕЕЕЕЕЕЕЕЕЕЕВР*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 }
-
 
 .background{
 
@@ -113,7 +112,19 @@ border-radius: 25%;
 
 
 
+.podval{
 
+
+
+background-color: grey;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 15%;
+margin: -8px;
+
+
+}
 
 
 

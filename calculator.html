@@ -4,28 +4,28 @@
   <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js"></script>
-  <title>calculator 1.2</title>
+  <title>calculator 1.4</title>
 
 
 
-<!--<script type="text/javascript">
+<script type="text/javascript">
 $(document).ready(function(e){
    var left = 0,
    top = 0,
-   element = $('body'),
+   element = $('html'),
    offset =  { left: element.offset().left, top: element.offset().top };
    element.bind('mousemove', function(e){
       left = (e.pageX-offset.left);
       top = (e.pageY-offset.top);
       $(this).css({
-          backgroundPosition: '-'+(0.1*left)+'px -'+(0.1*top)+'px'
+          backgroundPosition: '-'+(0.02*left)+'px -'+(0.02*top)+'px'
           
       });
     });
 });
 </script>
 
--->
+
 
 
  </head>
@@ -34,7 +34,7 @@ $(document).ready(function(e){
 
 <div class ="background">
 
-<div class="name">--Calculator&nbsp;v 1.3--</div>
+<div class="name">--Calculator&nbsp;v 1.4--</div>
 
 <div id="output"><h2 id="numers">0</h2></div>
 
@@ -62,9 +62,10 @@ $(document).ready(function(e){
     <input type="button" id="%" value = "%" onclick="myPers()">
    </div>
 
+
 </div>
 
-
+<div class="podval"></div>
 
 </body>
 </html>
